@@ -24,3 +24,19 @@ print(users["address"]["street"])
 print(users["address"]["geo"])
 print(users["address"]["geo"]["lat"])
 print(users["address"]["geo"]["lng"])
+
+print(users)
+# mengetahui kelas dengan cara mem-print di bawah ini:
+print(type(users))
+# -MENGUBAH PYTHON DICTIONARY KE JSON-
+print("\nUbah Dictionary ke JSON")
+import json
+result = json.dumps(users)
+print(type(result))
+print(result)
+
+# -MENGUBAH JSON KE PYTHON DICTIONARY-
+
+# MENULIS HASIL KE FILE
+with open("result.json", "w") as file:
+    json.dump(users, file)
